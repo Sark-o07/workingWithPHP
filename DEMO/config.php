@@ -1,5 +1,5 @@
 <?php 
-echo "you are in config.php\n";
+
 return [
     "database" => [
         "host" => "localhost",

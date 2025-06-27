@@ -2,7 +2,6 @@
 
 $heading = "Notes";
 
-var_dump(base_path("config.php"));
 $config = require base_path("config.php");
 
 $db = new Database($config["database"]);

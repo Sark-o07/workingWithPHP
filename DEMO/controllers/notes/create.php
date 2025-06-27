@@ -10,10 +10,8 @@ $user_id = 1; // Assuming a logged-in user with ID 1 for demonstration purposes
 
 $errors = [];
 
+$body = $_POST['body'] ?? '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $body = $_POST['body'] ?? '';
-
-// dd($body);
 
     if (!Validator::string($body, 1, 1000)) {
         $errors['body'] = "Note with max 1000 characters is required.";

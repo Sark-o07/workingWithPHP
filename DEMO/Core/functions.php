@@ -21,6 +21,12 @@ function authorize($condition, $status = Response::HTTP_FORBIDDEN) {
     }
 }
 
+function abort($code = Response::HTTP_NOT_FOUND) {
+    http_response_code($code);
+    view("{$code}.view.php");
+    die();
+}
+
 function base_path($path) {
     return BASE_PATH . $path;
 }

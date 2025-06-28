@@ -4,7 +4,7 @@
 
 <main>
   <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    <form method="POST" class="bg-white p-6 rounded-lg shadow">
+    <form method="POST" action="/notes" class="bg-white p-6 rounded-lg shadow">
       <div class="mb-4">
         <textarea placeholder="Let your Ideas flow..." id="body" name="body" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"  ><?= $_POST['body'] ?? "" ?></textarea>
         <?php if (isset($errors['body'])): ?>

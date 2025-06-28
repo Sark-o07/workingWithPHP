@@ -9,6 +9,13 @@
     <div class="mb-4 p-4 bg-white rounded-lg shadow hover:bg-gray-100">
             <p class="text-sm text-gray-500 mb-2">Created at: <?= $note["created_at"] ?></p>
            <?= htmlspecialchars($note["body"]) ?>
+           <form class="mt-6" method="POST">
+            <div class="flex justify-end">
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="hidden" name="id" value="<?= $note["id"] ?>">
+              <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition text-xs">Delete</button>
+            </div>
+           </form>
         </div>
   </div>
 </main>

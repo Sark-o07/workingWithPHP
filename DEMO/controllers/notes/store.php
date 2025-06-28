@@ -1,12 +1,11 @@
 <?php
 use Core\Database;
 use Core\Validator;
+use Core\App;
 
 $user_id = 1; // Assuming a logged-in user with ID 1 for demonstration purposes
 
-$config = require base_path("config.php");
-
-$db = new Database($config["database"]);
+$db = App::resolve(Database::class);
 
 $errors = [];
 $body = $_POST['body'] ?? '';
